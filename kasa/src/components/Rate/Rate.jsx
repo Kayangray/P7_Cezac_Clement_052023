@@ -13,7 +13,7 @@ export default function Rate({ score }) {
 						src={fullStar}
 						alt="rating star"
 					/>
-				) : ( //affichage conditionnel des étoiles de score, pleine ou vide selon le score passé en props
+				) : ( //affichage conditionnel des étoiles de score, pleine ou vide selon le score passé en propriété
 					<img
 						key={level.toString()}
 						className="star"

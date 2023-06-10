@@ -6,6 +6,8 @@ import FicheLogement from "./pages/FicheLogement/FicheLogement";
 import Footer from "./components/Footer/Footer";
 import Error from "./pages/Error/Error.jsx";
 
+// On défini les routes, qui seront envoyés vers index.js, les routes non trouvées iront vers errorPage
+
 function App() {
   return (
     <div className="App">

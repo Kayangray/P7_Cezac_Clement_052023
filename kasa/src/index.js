@@ -4,6 +4,7 @@ import App from "./App";
 import "./style/main.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+//Charge les routes pour les différentes pages
 root.render(
   <BrowserRouter>
     <App />
