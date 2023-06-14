@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Home() {
-	const [data, setData] = useState([]);
+	const [data, setData] = useState([]); //On définit un useState
 
 	useEffect(() => {
-		axios.get("/logements.json").then((res) => setData(res.data)); //requète AXIOS ici également pour prochaine utilisation API
-	}, []);
+		axios.get("/logements.json").then((res) => setData(res.data)); //setData devient la réponse
+	}, []);															   //requète AXIOS ici également pour prochaine utilisation API
 
 	return (
 		<>
