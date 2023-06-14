@@ -11,14 +11,14 @@ export default function FicheLogement() {
 	const params = useParams();
 	const navigate = useNavigate();
 
-	const [pickedAppart, setPickedAppart] = useState();
+	const [pickedAppart, setPickedAppart] = useState(); //Quand on clique 
 	useEffect(() => {
 		const getData = async () => {
-			const res = await axios.get("/logements.json"); //Utilisation d'une requête AXIOS pour une future mise en place de l'API
+			const res = await axios.get("/logements.json"); //Utilisation d'une requête AXIOS pour une future mise en place de l'API, on aurait pu utiliser fetch()
 			const picked = res.data.find(({ id }) => id === params.id);
-			res.data.map(() => setPickedAppart(picked));
+			res.data.map(() => setPickedAppart(picked)); //On transforme la réponse obtenue en données pour la page (picked)
 			if (picked === undefined) {
-				navigate("/404", { state: { message: "Can't get data" } }); //renvoi vers la page 404 en cas d'URL de logement invalide
+				navigate("/404", { state: { message: "Can't get data" } }); //renvoi vers la page 404 en cas d'URL de logement invalide et arrêt de l'éxécution du code
 			}
 		};
 		getData();
