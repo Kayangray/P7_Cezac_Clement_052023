@@ -5,22 +5,26 @@
   @media screen and (min-width: $breakpoint-desktop) {
     text-transform: none;
   }
+}
 
-  &_link-home,
-  &_link-about {
-    @include font-right(12px);
-    color: $primary-color;
-    text-decoration: none;
-    padding-left: 0.8rem;
+.nav-header_link-home,
+.nav-header_link-about {
+  text-decoration-line: underline;
+  @include font-right(12px);
+  color: $primary-color;
+  text-decoration: none;
+  padding-left: 0.8rem;
 
-    @media screen and (min-width: $breakpoint-desktop) {
-      @include font-right(24px);
-      padding-left: 3.5rem;
-    }
-
-    &:hover,
-    &:focus {
-      text-decoration-line: underline;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    @include font-right(24px);
+    padding-left: 3.5rem;
   }
+
+  &:hover,
+  &:focus {
+    text-decoration-line: underline;
+  }
+}
+a.active {
+  text-decoration-line: underline;
 }
